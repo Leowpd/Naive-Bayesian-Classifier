@@ -1,7 +1,9 @@
 ## Description
 
+In this project we build a naive bayesian text-based classifier that predicts the category of a student project based on its text description. The project is extended by transforming the data by document frequency. This extension to the base model requires hyper-parameter tuning. A more detailed description of each part of the project follows.
+
 ### Preprocessing & Standard Naive Bayesian Learner
-We first sort each example into a bag of words. Each "bag" is a list and is stored in a dictionary with the index of the example as the key. We allow for duplicate words, this is consistent with the examples shown in lectures. During this process we also keep track of: the number of occurances of each word in a class; the total number of words per class; the quantities of each class. This should give us all the ingredients we need for our standard naive Bayesian (SNB) classifier.
+We first sort each example into a bag of words. Each "bag" is a list and is stored in a dictionary with the index of the example as the key. We allow for duplicate words. During this process we also keep track of: the number of occurances of each word in a class; the total number of words per class; the quantities of each class. This should give us all the ingredients we need for our standard naive Bayesian (SNB) classifier.
 
 Earlier versions used an attribute matrix instead of the bags of words method, but it was harder to work with while building the classifier and offered no noticable computational benefits. Bags-of-words is easier to implement, easier to work with (as one can simply iterate through the examples and the words within the examples), and not computationally expensive. Generating these bags at this stage will also make future improvements (e.g. adding n-grams) easier to implement.
 
